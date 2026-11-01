@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mapa por la Memoria - Proyecto Ausencias</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <header class="main-header">
+    <h1>Mapa por la Memoria</h1>
+    <p>Reconstruyendo el sentido de la ausencia a través de la fotografía</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="#plan">Plan de Trabajo</a>
+    <a href="#historia">Contexto Histórico</a>
+    <a href="#proyecto-germano">El Proyecto "Ausencias"</a>
+    <a href="#galeria">Galería Interactiva</a>
+    <a href="#reflexion">Reflexión y Transmisión</a>
+    <a href="#plan-condor">Plan Cóndor</a>
+  </nav>
+
+  <main class="container">
+
+    <section id="plan" class="section-card">
+      <h2>1. Plan de Trabajo</h2>
+      <p class="section-intro">Propuesta de estructura y fundamentos del sitio web pedagógico:</p>
+      
+      <div class="plan-grid">
+        <div class="plan-item">
+          <h3>Tema</h3>
+          <p>Homenaje al proyecto "Ausencias" de Gustavo Germano y el impacto de la última dictadura militar (1976-1983).</p>
+        </div>
+        <div class="plan-item">
+          <h3>Objetivos</h3>
+          <p>Mostrar el vacío dejado por las desapariciones y promover la memoria en las nuevas generaciones.</p>
+        </div>
+        <div class="plan-item">
+          <h3>Tipo de homenaje</h3>
+          <p>Sitio web memorial interactivo de registro fotográfico y documental.</p>
+        </div>
+        <div class="plan-item">
+          <h3>Público objetivo</h3>
+          <p>Estudiantes, docentes y público interesado en la memoria e historia reciente.</p>
+        </div>
+        <div class="plan-item">
+          <h3>Recursos</h3>
+          <p>Imágenes históricas y actuales, testimonios, maquetación web HTML/CSS/JS.</p>
+        </div>
+        <div class="plan-item">
+          <h3>Actividades</h3>
+          <p>Exploración visual comparativa, lectura guiada y espacio de reflexión.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia" class="section-card">
+      <h2>2. Contexto Histórico: Desapariciones (1976-1983)</h2>
+      <p>
+        Durante la última dictadura militar en Argentina, el terrorismo de Estado llevó a cabo un plan sistemático de 
+        desaparición forzada de personas. Miles de hombres y mujeres fueron secuestrados de sus hogares, trabajos y calles, 
+        dejando a sus familias en un estado permanente de búsqueda, incertidumbre y dolor.
+      </p>
+    </section>
+
+
+    <section id="proyecto-germano" class="section-card">
+      <h2>3. El Proyecto de Gustavo Germano</h2>
+      <p>
+        El fotógrafo Gustavo Germano desarrolló una propuesta visual única: tomar fotografías familiares de personas 
+        desaparecidas antes de su secuestro y recrear la misma escena décadas después, en el mismo lugar, con la misma 
+        luz y las mismas posiciones de las personas sobrevivientes.
+      </p>
+      <div class="highlight-box">
+        <p>
+          Al dejar vacío el espacio donde antes estaba la persona desaparecida, la imagen evidencia el paso implacable 
+          del tiempo y materializa el impacto visual del vacío que dejaron en sus familias y en toda la sociedad.
+        </p>
+      </div>
+    </section>
+
+    <section id="galeria" class="section-card">
+      <h2>4. Galería de Memoria: El Paso del Tiempo y la Ausencia</h2>
+      <p>Interactuá con el botón para observar la diferencia entre la imagen original y la recreación del espacio:</p>
+      
+      <div class="interactive-viewer">
+        <div class="img-wrapper">
+          <img id="foto-memoria" src="imgs/foto_original.png" alt="Fotografía histórica">
+        </div>
+        <div class="controls">
+          <button id="btn-toggle" class="btn-primary" onclick="alternarImagen()">Ver Recreación (Presente / Ausencia)</button>
+          <p id="desc-foto" class="caption">Estado actual: Fotografía original del pasado</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="reflexion" class="section-card">
+      <h2>5. Recordar no es solo saber lo que pasó</h2>
+      <p>
+        La memoria histórica exige trascender los datos abstractos o las fechas en un libro. Recordar significa 
+        ponerle rostro a las víctimas, escuchar sus historias de vida y comprometerse a transmitir su legado a las 
+        nuevas generaciones para garantizar que estos hechos no vuelvan a repetirse jamás.
+      </p>
+    </section>
+
+    <section id="plan-condor" class="section-card">
+      <h2>Plan Cóndor y la Memoria Regional</h2>
+      <p>
+        El Plan Cóndor no fue un hecho aislado, sino un sistema formal de coordinación e inteligencia represiva 
+        implementado en la década de 1970 entre las dictaduras del Cono Sur (Argentina, Chile, Uruguay, Paraguay, 
+        Bolivia y Brasil). Esto permitió la persecución, secuestro y desaparición de personas más allá de las fronteras nacionales.
+      </p>
+
+      <div class="img-wrapper" style="margin-top: 1.5rem; margin-bottom: 1.5rem;">
+        <img src="imgs/plan-condor.jpeg" alt="Mapeo de trayectorias de víctimas y lugares del Plan Cóndor">
+      </div>
+      <p class="caption">Mapeo de trayectorias, centros clandestinos y pasos fronterizos vinculados a la represión transnacional.</p>
+
+      <div class="interactive-info-box" style="margin-top: 2rem;">
+        <h3 style="font-size: 1.2rem; margin-bottom: 1rem; color: #2c3e50;">Explorá los ejes clave del Plan Cóndor:</h3>
+        
+        <div class="condor-buttons" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
+          <button class="btn-secondary" onclick="mostrarInfo('coordinacion')">1. Coordinación Regional</button>
+          <button class="btn-secondary" onclick="mostrarInfo('fronterizo')">2. Tránsito y Fronteras</button>
+          <button class="btn-secondary" onclick="mostrarInfo('impacto')">3. Vínculo con las Ausencias</button>
+        </div>
+
+        <div id="info-contenido" style="background: #f8f9fa; padding: 1.2rem; border-left: 4px solid #e74c3c; border-radius: 0 6px 6px 0;">
+          <p><strong>Haz clic en los botones de arriba para descubrir cómo operaba este sistema represivo.</strong></p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <p>Proyecto Escolar de Historia &copy; 2026 — Memoria, Verdad y Justicia</p>
+  </footer>
+
+  <script>
+    let vistaActual = "pasado";
+
+    function alternarImagen() {
+      const img = document.getElementById("foto-memoria");
+      const desc = document.getElementById("desc-foto");
+      const btn = document.getElementById("btn-toggle");
+
+      if (vistaActual === "pasado") {
+        img.src = "imgs/foto_presente.png";
+        desc.innerText = "Estado actual: Recreación presente mostrando el vacío de la ausencia";
+        btn.innerText = "Ver Fotografía Original (Pasado)";
+        vistaActual = "ausencia";
+      } else {
+        img.src = "imgs/foto_original.png";
+        desc.innerText = "Estado actual: Fotografía original del pasado";
+        btn.innerText = "Ver Recreación (Presente / Ausencia)";
+        vistaActual = "pasado";
+      }
+    }
+
+    function mostrarInfo(tema) {
+      const cajaInfo = document.getElementById("info-contenido");
+      
+      if (tema === 'coordinacion') {
+        cajaInfo.innerHTML = `
+          <h4>1. Coordinación Regional</h4>
+          <p>Los servicios de inteligencia de las dictaduras compartían información, listas de prisioneros y ejecutaban operativos conjuntos clandestinos para eliminar opositores políticos sin respetar soberanías nacionales.</p>
+        `;
+      } else if (tema === 'fronterizo') {
+        cajaInfo.innerHTML = `
+          <h4>2. Tránsito y Fronteras</h4>
+          <p>Pasos fronterizos, aeropuertos y cárceles clandestinas funcionaron como nodos de un circuito criminal donde las víctimas eran trasladadas ilegalmente de un país a otro para ser torturadas o desaparecidas.</p>
+        `;
+      } else if (tema === 'impacto') {
+        cajaInfo.innerHTML = `
+          <h4>3. Vínculo con las Ausencias</h4>
+          <p>El Plan Cóndor explica por qué muchas familias sufrieron la pérdida de seres queridos no solo en su propio país, sino en el exilio. La magnitud transnacional agrava el vacío que retrata el proyecto de Gustavo Germano.</p>
+        `;
+      }
+    }
+  </script>
+</body>
+</html>
